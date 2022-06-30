@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>商品區</div>
+    <div class="products-area"></div>
+    <div class="cart-title">購物車</div>
+    <button onclick="removeAll()">清空購物車</button>
+    <div class="cart"></div>
+
+
+    <script>
+    // 這邊是程式碼
+
+    // 商品
+    const products = ["滷肉飯", "貢丸湯", "乾麵"];
+  
+    // 商品區域
+    const productsArea = document.querySelector(".products-area");
+    const cart = document.querySelector(".cart");
+
+    function removeAll() {
+      cart.innerHTML = "";
+    }
+
+    function generateProducts() {
+      for (let i = 0; i < products.length; i++) {
+        const product_name = products[i];
+        generateProductItem(product_name);
+      }
+    }
+
+    function generateProductItem(product_name) {
+      const div = document.createElement("div");
+
+      div.classList.add("product-container");
+      const div_text = document.createTextNode(product_name);
+
+      const button = document.createElement("button");
+
+      button.addEventListener("click", function(){
+        addToCart(product_name);
+      });
+
+      button.classList.add("add-button");
+
+      const button_text = document.createTextNode("加入購物車");
+
+      button.appendChild(button_text);
+
+      div.appendChild(div_text);
+      div.appendChild(button);
+
+      productsArea.appendChild(div);
+    }
+
+    function addToCart(product_name) {
+      const cart_item = document.createElement("div");
+
+      cart_item.classList.add("cart-item");
+
+      const cart_item_text = document.createTextNode(product_name);
+
+      cart_item.appendChild(cart_item_text);
+
+      cart.appendChild(cart_item);
+    }
+
+    generateProducts();
+    </script>
+</body>
+</html>

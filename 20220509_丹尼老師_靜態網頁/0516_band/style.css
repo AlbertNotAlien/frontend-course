@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+}
+
+.title, .subtitle {
+    font-family: "Segoe UI",Arial,sans-serif;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    color: white;
+    padding: 8px 16px;
+    background-color: black;
+    margin-bottom: 16px;
+}
+
+.button:hover{
+    cursor: pointer;
+    color: black;
+    background: #757575;
+}
+
+/* navbar */
+
+
+#navbar {
+    width: 100%;
+    height: 46.5px;
+    background-color: black;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    color: white;
+    font-size: 15px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.menu-item {
+    padding: 12px 24px;
+}
+
+.menu-item:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.search-container {
+    cursor: pointer;
+    padding: 12px 24px;
+}
+
+.search-container:hover {
+    background-color: #ff5e5e;
+}
+
+.fa-solid {
+    font-weight: 900;
+}
+
+.fa-magnifying-glass {
+    font-size: 14px;
+}
+
+
+/* main-image */
+
+
+.main-image-container {
+    width: 100%;
+    position: relative;
+}
+
+.main-image-container .content {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.main-image-container .title {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.main-image-container .subtitle {
+    color: white;
+    margin: 15px 0;
+}
+
+
+/* THE BAND */
+
+
+.the-band-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+
+.the-band-container .title {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.the-band-container .subtitle {
+    color: #757575;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.the-band-container .content {
+    font-size: 15px;
+}
+
+.the-band-container .images-container {
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.the-band-container .image-block {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-block .name {
+    font-size: 15px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+
+/* TOUR DATES */
+
+
+.tour-dates-block {
+    background-color: black;
+}
+
+.tour-dates-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+
+.tour-dates-container .title {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 10px 0;
+}
+
+.tour-dates-container .subtitle {
+    text-align: center;
+    color: hsla(0, 0%, 100%, 0.7);
+    font-size: 15px;
+    font-style: italic;
+}
+
+.month-container {
+    background-color: white;
+}
+
+.month-block {
+    display: flex;
+    font-size: 15px;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.month-block .month {
+    color: #757575;
+    padding: 0 8px;
+    margin: 0 16px;
+}
+
+.month-block .sold-out {
+    color: white;
+    background-color: #f44336;
+    padding: 0 8px;
+}
+
+.Nov-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Nov {
+    color: white;
+    background-color: black;
+    padding: 0 8px;
+    border-radius: 50%;
+    margin-right: 32px;
+}
+
+.city-container {
+    padding: 32px 0px;
+    display: flex;
+    margin: 0 -8px;
+    justify-content: space-between;
+}
+
+.city-block {
+    width: 33.33%;
+    background-color: white;
+    margin: 0 8px;
+}
+
+.city-content {
+    padding: 0 16px;
+}
+
+.city-content .location {
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: "Lato", sans-serif;
+    margin: 15px 0;
+}
+
+.city-content  .date {
+    font-size: 15px;
+    opacity: 0.6;
+    margin: 15px 0;
+}
+
+.city-content .content {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+/* CONTACT */
+
+.contact-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+
+.contact-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+
+.contact-container .title {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+.contact-container .subtitle {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #757575;
+    font-style: italic;
+}
+
+.info-block {
+    width: 50%;
+}
+
+.info {
+    display: flex;
+}
+
+.icon {
+    width: 30px;
+}
+
+.input-block {
+    width: 50%;
+}
+
+.inputs {
+    padding-bottom: 16px;
+}
+
+.name-email-block {
+    display: flex;
+    padding-bottom: 8px;
+}
+
+.input-name, .input-email {
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 95%;
+}
+
+.input-email {
+    float: right;
+}
+
+.input-message {
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.name-email-block .name,.name-email-block .email {
+    width: 50%;
+}
+
+.message {
+    width: 100%;
+}
+
+.send {
+    float: right;
+    text-transform: uppercase;
+}
+
+/* map-image */
+
+.main-image-container {
+    background-color: #f1f1f1;
+}
+
+.map {
+    width: 100%;
+    height: auto;
+    margin-bottom: -5px;
+}
+
+
+/* footer */
+
+#footer {
+    text-align: center;
+    color: hsla(0, 0%, 40%);
+    background-color: #f1f1f1;
+    padding: 64px 0;
+}
+
+.icon-block {
+    font-size: 24px;
+    font: normal normal normal 14px/1;
+    padding: 32px 0;
+}
+
+.powered-by {
+    font-size: 15px;
+}

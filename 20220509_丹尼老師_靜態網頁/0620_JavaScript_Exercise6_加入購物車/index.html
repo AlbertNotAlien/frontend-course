@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>商品區</div>
+    <div class="products-area"></div>
+    <div class="cart-title">購物車</div>
+    <button onclick="removeAll()">清空購物車</button>
+    <div class="cart"></div>
+
+
+    <script>
+    // 商品
+    const products = ["滷肉飯", "貢丸湯", "乾麵"];
+  
+    // 商品區域
+    const productsArea = document.querySelector(".products-area");
+    const cart = document.querySelector(".cart");
+
+    // 移除全部商品
+    function removeAll() {
+        cart.innerHTML = "";
+    }
+
+    // 定義product_name
+    function generateProducts() {
+        for (let i = 0; i < products.length; i++) {
+            const product_name = products[i];
+            generateProductItem(product_name);
+        }
+    }
+
+    // function: 將陣列的名稱加入商品區
+    function generateProductItem(product_name) {
+        // 新增div
+        const div = document.createElement("div");
+        // 在div新增"product-container"的class
+        div.classList.add("product-container");
+        // div裡面顯示的商品名稱(product_name)
+        const div_text = document.createTextNode(product_name);
+        // 新增按鈕
+        const button = document.createElement("button");
+
+        // 按下按鈕會啟動 "function: 加進購物車"
+        button.addEventListener("click", function(){
+            addToCart(product_name);
+        });
+
+        // 幫button新增"add-button"的class
+        button.classList.add("add-button");
+        // button裡面顯示的"加入購物車"
+        const button_text = document.createTextNode("加入購物車");
+        // button裡面新增"加入購物車"
+        button.appendChild(button_text);
+
+        //
+        div.appendChild(div_text);
+        div.appendChild(button);
+
+        productsArea.appendChild(div);
+    }
+
+    // 加進購物車
+    function addToCart(product_name) {
+        const cart_item = document.createElement("div");
+
+        cart_item.classList.add("cart-item");
+
+        const cart_item_text = document.createTextNode(product_name);
+
+        cart_item.appendChild(cart_item_text);
+
+        cart.appendChild(cart_item);
+    }
+
+    // 執行function
+    generateProducts();
+    </script>
+</body>
+</html>
